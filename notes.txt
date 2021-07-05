@@ -1,0 +1,5 @@
+CSS:
+
+1. Inline styles - Add the styles in DOM element (<div>, <p>) using style (for eg: <div style="color: red"></div>)
+2. Page level styles - Styles are defined in the <head> section of the document (using css selectors tag, id, class)
+3. External CSS - Styles are declared outside the document and included in the document using href (using css selectors)

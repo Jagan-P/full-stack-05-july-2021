@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            CSS
+        </title>
+        <style>
+            p {
+                background-color: yellow;
+                color: green;
+                margin-top: 0px;
+                margin-right: 10px;
+                margin-bottom: 20px;
+                margin-left: 30px;
+                border: 1px solid black;
+            }
+            .container {
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+                margin: 0 10px 20px 30px;
+            }
+            #span {
+                background-color: orange;
+            }
+            li:nth-child(2n) {
+                background-color: lightgray;
+            }
+            li {
+                list-style-type: none;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Inline styles -->
+        <p style="color: red">Some content</p>
+        <p>Some content styled using page level styles</p>
+        <div class="container">
+            <p>Some text inside container</p>
+        </div>
+        <span id="span">Some span tag</span>
+        <ul>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>Fourth</li>
+        </ul>
+    </body>
+</html>
