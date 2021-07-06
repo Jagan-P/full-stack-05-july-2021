@@ -1,48 +1,140 @@
 <html>
-    <head>
-        <title>
-            CSS
-        </title>
-        <style>
-            p {
-                background-color: yellow;
-                color: green;
-                margin-top: 0px;
-                margin-right: 10px;
-                margin-bottom: 20px;
-                margin-left: 30px;
-                border: 1px solid black;
-            }
-            .container {
-                width: 200px;
-                height: 200px;
-                background-color: pink;
-                margin: 0 10px 20px 30px;
-            }
-            #span {
-                background-color: orange;
-            }
-            li:nth-child(2n) {
-                background-color: lightgray;
-            }
-            li {
-                list-style-type: none;
-            }
-        </style>
-    </head>
-    <body>
-        <!-- Inline styles -->
-        <p style="color: red">Some content</p>
-        <p>Some content styled using page level styles</p>
-        <div class="container">
-            <p>Some text inside container</p>
-        </div>
-        <span id="span">Some span tag</span>
-        <ul>
-            <li>First</li>
-            <li>Second</li>
-            <li>Third</li>
-            <li>Fourth</li>
-        </ul>
-    </body>
+  <head>
+    <title>CSS</title>
+    <style>
+      p {
+        background-color: yellow;
+        color: green;
+        margin-top: 0px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+        border: 1px solid black;
+      }
+      .container {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        margin: 0 10px 20px 30px;
+      }
+      #span {
+        background-color: orange;
+      }
+      li:nth-child(2n) {
+        background-color: lightgray;
+      }
+      li {
+        list-style-type: none;
+      }
+      [custom-left] {
+        float: left;
+      }
+      [custom-right] {
+        float: right;
+      }
+      /* unvisited link */
+      a:link {
+        color: #ff0000;
+      }
+
+      /* visited link */
+      a:visited {
+        color: #00ff00;
+      }
+
+      /* mouse over link */
+      a:hover {
+        color: #ff00ff;
+      }
+      li:first-child {
+        color: blue;
+      }
+      li:last-child {
+        color: green;
+      }
+
+      p::first-letter {
+        color: #ff0000;
+        font-size: xx-large;
+      }
+      .pseudo::after {
+        content: 'a'
+      }
+      .pseudo::before {
+        content: 'a'
+      }
+      button {
+        background-color: green;
+        border: 1px solid black;
+        color: #fff;
+      }
+      button:disabled {
+        background-color: rgb(0, 255, 0, 0.7);
+      }
+      .span-with-margin {
+        margin-top: 10px;
+        transform: rotate(75deg);
+        /* without inline-block margin-top, transform doesn't work */
+        display: inline-block;
+      }
+      .display-none {
+        /* the elements occupy zero width and height and succeeding elements move up or to the left or right */
+        display: none;
+      }
+      .visibility-hidden {
+        /* the elements still occupy width, height (its own space) however it is invisible (no color, text etc.) */
+        visibility: hidden;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Inline styles -->
+    <p style="color: red">Some content</p>
+    <p>Some content styled using page level styles</p>
+    <div class="container">
+      <p>Some text inside container</p>
+    </div>
+    <div class="container">
+      <p>Some text inside container</p>
+    </div>
+    <span id="span">Some span tag 1</span>
+    <span id="span">Some span tag 2</span>
+    <span id="span">Some span tag 3</span>
+    <span id="span">Some span tag 4</span>
+    <div class="clearfix">
+      <span custom-left>Left</span>
+      <span custom-right>Right1</span>
+      <p custom-right>Right</p>
+    </div>
+    <ul>
+      <li class="display-none">First</li>
+      <li class="visibility-hidden">Second</li>
+      <li>Third</li>
+      <li>Fourth</li>
+    </ul>
+
+    <!-- Styling fonts -->
+    <p style="color: red">Some text</p>
+    <p style="font-weight: 700">Some text</p>
+    <p style="font-family: fantasy">Some text</p>
+    <p style="font-size: large">Some text</p>
+    <p style="font-size: 12px">Some text</p>
+    <p style="font-size: 12rem">Some text</p>
+    <p style="font-size: 12em">Some text</p>
+
+    <a href="https://www.google.com">Google</a>
+
+    <p>First paragraph</p>
+
+    <div class="pseudo">Data</div>
+
+    <button disabled>Disabled</button>
+    <button>Submit</button>
+    <span class="span-with-margin">Data</span>
+  </body>
 </html>
