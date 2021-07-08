@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>
+            CSS
+        </title>
+        <style>
+            div>p {
+                color: green;
+            }
+            div p {
+                color: red;
+            }
+            .first~li {
+                color: yellow;
+            }
+            .first+li {
+                color: orange;
+            }
+            p {
+                background-color: orange;
+            }
+            p.para-id {
+                background-color: yellow !important;
+            }
+            p#para-id {
+                background-color: green !important;
+            }
+            .para-id {
+                background-color: red !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <span>
+                <p>Para inside div</p>
+            </span>
+        </div>
+        <div>
+            <p>Para inside div</p>
+        </div>
+        <p style="background-color: green !important">Para outside div</p>
+        <p class="para-id">Para outside div with para-class</p>
+        <p class="para-id" id="para-id">Para outside div with para-id</p>
+        <ul>
+            <li class="first">First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>Fourth</li>
+        </ul>
+    </body>
+</html>
