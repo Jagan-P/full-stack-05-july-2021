@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            CSS
+        </title>
+        <style>
+        
+        </style>
+    </head>
+    <body>
+        <!-- no change in the positioning of the elements. The elements appear in the natural DOM flow -->
+        <div style="position: static">1</div>
+        <div style="position: static">2</div>
+        <div style="position: static">3</div>
+        <div style="position: static">4</div>
+
+        <!-- positioned x pixels or percent relative to its normal position. Without x not equal to zero in top/left/right/bottom doesn't make any difference -->
+        <div style="position: static">1</div>
+        <div style="position: relative; top: 10px">2</div>
+        <div style="position: static">3</div>
+        <div style="position: static">4</div>
+
+        <!-- positioned relative to its non-static or positioned ancestor. Without non-static ancestor it is position relative to <body> -->
+        <div style="position: static">1</div>
+        <div style="position: absolute; top: 0px">2 absolute</div>
+        <div style="position: static">3</div>
+        <div style="position: static">4</div>
+
+        <!-- positioned relative to its non-static or positioned ancestor. Without non-static ancestor it is position relative to <body> -->
+        <div style="position: static">1</div>
+        <div style="position: relative">
+            <div style="position: absolute; top: 0px">2 absolute non-static parent</div>
+        </div>
+        <div style="position: static">3</div>
+        <div style="position: static">4</div>
+
+        <!-- fixed with respect to the view port. In most of the browsers without any top/left/bottom/right the position is fixed in the place where it appears in the normal DOM flow -->
+        <div style="position: static">1</div>
+        <div style="position: fixed">2 fixed</div>
+        <div style="position: static">3</div>
+        <div style="position: static">4</div>
+
+        <div style="padding-top: 1000px"></div>
+    </body>
+</html>
