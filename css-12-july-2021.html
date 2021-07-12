@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>CSS 12 July 2021</title>
+  </head>
+  <body>
+    <div style="position: relative">
+      <img
+        style="opacity: 0.3"
+        src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+      />
+      <p style="position: absolute; top: 0">This is some text on image</p>
+    </div>
+
+    <!-- Text will be more readable here -->
+    <div
+      style="
+        height: 200px;
+        width: 200px;
+        background-color: rgba(255, 0, 0, 0.3);
+      "
+    >
+      Data data data data
+    </div>
+
+    <!-- text is less readable since the opacity property gets applied to the text too and it becomes transparent -->
+    <div
+      style="height: 200px; width: 200px; background-color: red; opacity: 0.3"
+    >
+      Data Data Data Data Data Data
+    </div>
+
+    <p style="text-align: left">Align left</p>
+    <p style="text-align: center">Align center</p>
+    <p style="text-align: right">Align right</p>
+
+    <div
+      style="
+        height: 200px;
+        width: 200px;
+        background-color: rgba(255, 0, 0, 0.3);
+        border: 1px solid black;
+        border-radius: 5px;
+      "
+    >
+      Data data data data
+    </div>
+
+    <!-- circle, one can use 50% border-radius too -->
+    <div
+      style="
+        height: 200px;
+        width: 200px;
+        background-color: rgba(255, 0, 0, 0.3);
+        border: 1px solid black;
+        border-radius: 100px;
+      "
+    >
+      Data data data data
+    </div>
+
+    <div
+      style="
+        background: url(https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg);
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: 30px;
+      "
+    ></div> 
+
+    <p style="
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    ">This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text.</p>
+
+    <abbr title="Data-to-be-shown-on-hover">Data</abbr>
+
+    <p style="word-break: break-all;">This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. Thisisaverylongtext. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text. This is a very long text.</p>
+
+    <div style="
+        height: 200px;
+        width: 200px;
+        background-color: rgba(255, 0, 0, 0.3);
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 20px 0 5px 5px black;
+      ">
+      Data data data data
+    </div>
+  </body>
+</html>
