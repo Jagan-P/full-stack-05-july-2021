@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <title>Javascript</title>
+  </head>
+  <body>
+    <p id="jagan">Jagan</p>
+    <p id="jagan">Jagan</p>
+    <script>
+      // variable created using var becomes global
+      if (true) {
+        var a = 10;
+      }
+      console.log(a);
+      // VM839:4 10
+      // undefined
+
+      //   variable created using let have local scope
+      if (true) {
+        let b = 10;
+      }
+      console.log(b);
+      // VM861:4 Uncaught ReferenceError: b is not defined
+      //     at <anonymous>:4:13
+      // (anonymous) @ VM861:4
+      var a;
+      if (true) {
+        a = 10;
+      }
+      console.log(a);
+      // VM884:5 10
+
+      //   objects
+      let a = {
+        name: "Jagan",
+        school: "abc",
+        age: 1,
+        is_driving: false,
+      };
+      //   undefined;
+      a.name;
+      //   ("Jagan");
+      a["name"];
+      //   ("Jagan");
+      let b = "name";
+      a[b];
+      //   ("Jagan");
+
+      let keys = Object.keys(a);
+      for (let i = 0; i < keys.length; i++) {
+        console.log(a[keys[i]]);
+      }
+
+      let values = Object.values(a);
+
+      let a = ["name", false, 0, { a: "name", b: "value" }];
+      //   undefined
+      a[3];
+      //   {a: "name", b: "value"}a: "name"b: "value"__proto__: Object
+      let b = { a: "a" };
+      let c = 0;
+      let d = "abc";
+      //   undefined
+      typeof a;
+      //   "object"
+      typeof b;
+      //   "object"
+      typeof c;
+      //   "number"
+      typeof d;
+      //   "string"
+      a.length;
+      //   4
+      b.length;
+      //   undefined
+      d.length;
+      //   3
+
+      let a = [0, 1, 2, 3];
+      let b = a;
+      //   undefined;
+      b[0] = 100;
+      //   100;
+      b;
+      //   b(4)[(100, 1, 2, 3)];
+      a;
+      //   a(4)[(100, 1, 2, 3)];
+
+      let a = [0, 1, 2, 3];
+      let b = JSON.parse(JSON.stringify(a));
+      //   undefined;
+      a(4)[(0, 1, 2, 3)];
+      b(4)[(0, 1, 2, 3)];
+      b[0] = 100;
+      100;
+      b(4)[(100, 1, 2, 3)];
+      a(4)[(0, 1, 2, 3)];
+
+      let a = [0, 1, 2, 3];
+      let b = [...a];
+    //   undefined;
+      a(4)[(0, 1, 2, 3)];
+      b(4)[(0, 1, 2, 3)];
+      b[0] = 100;
+      100;
+      b(4)[(100, 1, 2, 3)];
+      a(4)[(0, 1, 2, 3)];
+    </script>
+  </body>
+</html>
