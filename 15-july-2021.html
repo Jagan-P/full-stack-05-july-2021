@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <title>
+        Javscript
+    </title>
+    <style>
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>Para</p>
+    <div>div</div>
+    <ul>
+        <li>li1</li>
+        <li class="c1">li2</li>
+        <li id="id">li3</li>
+        <li>li4</li>
+    </ul>
+
+    <input placeholder="Enter your name" value="abc" type="text" />
+    <input placeholder="Enter your number" type="number" />
+    <span>
+        <input type="checkbox" name="checkbox" />
+        Label 1
+        <input type="checkbox" name="checkbox" />
+        Label 1
+    </span>
+
+    <span>
+        <input type="radio" name="gender" />
+        Male
+        <input type="radio" name="gender" />
+        Female
+    </span>
+
+    <select>
+        <option value="0">Select an option</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+    </select>
+
+    <textarea rows="3" columns="250">
+
+    </textarea>
+
+    <a href="https://www.google.com" target="_blank">Google</a>
+
+    <iframe src="index.html" style="width: 100%; height: 100%">
+
+    </iframe>
+
+
+    <script>
+        document.getElementsByClassName("c1")
+        // HTMLCollection {
+        //     0: li.c1
+        //         , length: 1
+        // }
+
+        document.getElementById("id")
+        // < li id = "id" >
+
+        document.querySelector("p")
+        // < p >
+
+        document.querySelector("li")
+        // < li >
+
+        document.querySelector(".c1")
+        // < li class="c1" >
+
+        document.querySelector("#id")
+        // < li id = "id" >
+
+        document.querySelectorAll("li")
+        // NodeList(4)[li, li.c1, li#id, li ]
+
+
+        // getting and setting values for input type text or number or select
+        document.getElementsByTagName("input")[0].value
+        // "abc"
+        document.getElementsByTagName("input")[0].value = "new value"
+        // "new value"
+        document.getElementsByTagName("input")[1].value
+        // "123"
+        document.getElementsByTagName("input")[1].value = "1234"
+        // "1234"
+        document.getElementsByTagName("select")[0].value
+
+
+        document.getElementsByTagName("textarea")[0].value = "abc"
+
+
+        // for radio buttons and checkboxes
+        let checkboxes = document.getElementsByName("checkbox");
+        for (let i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                console.log(checkboxes[i].nextSibling.nodeValue + " is checked")
+            }
+            else {
+                console.log(checkboxes[i].nextSibling.nodeValue + " is unchecked")
+            }
+        }
+    </script>
+</body>
+
+</html>
