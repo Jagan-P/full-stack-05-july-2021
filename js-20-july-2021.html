@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Javascript</title>
+    </head>
+    <body>
+        <img id="hd-image" src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80">
+
+        <button onclick="buttonClick()">Button</button>
+        <button id="button">Button with event listener</button>
+
+        <div onclick="divClick()" style="padding: 200px; background-color: green;">
+            <button onclick="buttonClick(event)">Click</button>
+        </div>
+
+        <!-- event delegation -->
+        <table onclick="cellClicked(event)">
+            <tr>
+                <th>Name</th>
+                <th>Class</th>
+            </tr>
+            <tr>
+                <td>
+                    ABC
+                </td>
+                <td>
+                    Class 1
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    DEF
+                </td>
+                <td>
+                    Class 2
+                </td>
+            </tr>
+        </table>
+        <script>
+            window.onload = function () {
+                console.log(document.getElementsByTagName("img")[0].clientHeight, document.getElementsByTagName("img")[0].clientWidth)
+            }
+            function cellClicked(event) {
+                // console.log(event,"table cell clicked");
+                // console.log(event.srcElement.parentElement.children[0]===event.srcElement)
+                // if(document.querySelect(event.srcElement)) {
+
+                // }
+
+                // console.log(event.srcElement.parentElement.children);
+                
+                let children = event.srcElement.parentElement.children;
+                for(let i = 0; i<children.length; i++) {
+                    if(i%2==0 && event.srcElement.isSameNode(children[i])) {
+                        console.log("cell clicked");
+                    }
+                }
+            }
+            function buttonClick(event) {
+                event.stopPropagation();
+                console.log(event,"button is clicked");
+            }
+
+            function divClick() {
+                console.log("div is clicked");
+            }
+
+            document.getElementById("button").addEventListener("click", buttonClickCustom);
+
+            function buttonClickCustom() {console.log("click event triggered")}
+
+            // remove events that are already attached
+            // document.getElementById("button").removeEventListener("click", buttonClick);
+    
+            // get events attached to a DOM in browser console
+            getEventListeners(document.getElementById("button"))
+        </script>
+    </body>
+</html>

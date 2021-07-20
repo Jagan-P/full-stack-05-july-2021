@@ -11,3 +11,30 @@ CSS selectors:
 3. Pseudo-class selectors (select elements based on a certain state)
 4. Pseudo-elements selectors (select and style a part of an element)
 5. Attribute selectors (select elements based on an attribute or attribute value)
+
+Events can be of two categories,
+1. Browser events - Where user doesn't play any role (Eg: onload)
+2. User events - User performs this event (Eg: scroll, click)
+
+
+Most of the times you don't have direct access to html, because it comes from plugins.
+So attaching events is achieveable only through event delegation.
+
+tr
+    - td (click)
+    - td
+
+td, td
+index%2 - true, false
+sameNode - true, false
+you saw output
+
+    - td
+    - td (click)
+
+td, td
+index%2 - true, false
+sameNode - false, true
+you don't see output
+
+
