@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>DOM</title>
+        <style>
+            .color-green {
+                color: green;
+            }
+            .bg-red {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="removeElement()">Remove</button>
+        <button onclick="removeClass()">Remove class</button>
+        <ul id="ul">
+
+        </ul>
+
+        <ul id="abc">
+
+        </ul>
+
+        <script>
+            let a = ["One", "Two", "Three"];
+
+            for(let i=0; i<a.length; i++) {
+                let li = document.createElement("li");
+                li.innerText=a[i];
+                document.getElementById("ul").appendChild(li);
+            }
+
+            let liString="";
+            for(let i=0; i<a.length; i++) {
+                // string interpolation
+                liString+=`<li class="color-green ">${a[i]}</li>`;
+            }
+            document.getElementById("abc").innerHTML = liString;
+
+            function removeElement() {
+                let li = document.getElementsByTagName("li");
+
+                for(let i=0; i<li.length; i++) {
+                    if(li[i].innerText=="Two") {
+                        // console.log(li[i]);
+                        li[i].parentElement.removeChild(li[i]);
+                    }
+                }
+            }
+
+            document.getElementById("ul").style.border = "1px solid gray";
+            document.getElementsByTagName("li")[3].classList.value+= "bg-red";
+
+            function removeClass() {
+                let value = document.getElementsByTagName("li")[3].classList.value;
+                value = value.replace("bg-red", "");
+                // console.log(value);
+                document.getElementsByTagName("li")[3].classList.value = value;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>
+        Forms and JS
+    </title>
+</head>
+
+<body>
+    <input onkeyup="out(event)" placeholder="Enter your name" value="abc" type="text" />
+    <input placeholder="Enter your number" type="number" />
+    <span>
+        <input type="checkbox" onchange="checkboxChange()" name="checkbox" />
+        Label 1
+        <input type="checkbox" onchange="checkboxChange()" name="checkbox" />
+        Label 2
+    </span>
+
+    <span>
+        <input type="radio" name="gender" />
+        Male
+        <input type="radio" name="gender" />
+        Female
+    </span>
+
+    <select onchange="out(event)">
+        <option value="0">Select an option</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+    </select>
+
+    <textarea onkeyup="out(event)" rows="3" columns="250">
+
+    </textarea>
+
+    <script>
+        let nameDOM = document.getElementsByTagName("input")[0];
+        let checkboxes = document.getElementsByName("checkbox");
+        function out(event) {
+            console.log(event.target.value);
+            console.log(nameDOM.value);
+        }
+        function checkboxChange() {
+            for(let i=0; i<checkboxes.length; i++) {
+                if(checkboxes[i].checked) {
+                    console.log(checkboxes[i].nextSibling);
+                    // console.log(checkboxes[i].nextElementSibling.innerHTML);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

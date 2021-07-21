@@ -38,3 +38,10 @@ sameNode - false, true
 you don't see output
 
 
+Task 21-July-2021
+- Have an input box
+- Display a list of items below it (ul li)
+- Try to style the list items (remove the bullets or number etc.)
+- Try to use font awesome icons (https://fontawesome.com/v4.7/icon/user)
+- As I type in the input box the list below should be filtered
+- Try to make the search as much friendly (case-insensitive, starting character, containing the character)
