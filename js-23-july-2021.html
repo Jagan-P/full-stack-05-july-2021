@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            JS
+        </title>
+    </head>
+    <body>
+
+        <form method="POST" action="https://jsonplaceholder.typicode.com/posts">
+            <input type="text" placeholder="Enter name"/>
+            <input type="number" />
+
+            <button type="submit">Submit data</button>
+        </form>
+        <script>
+            // alert("Hello");
+            // console.log("out");
+            // console.log(prompt("What's your name?"));
+            // console.log(confirm("Are you sure?"));
+
+            // cookies are retained until the window is closed
+            // when tab is closed cookies are retained
+            document.cookie = "name=jagan";
+            // add any number of cookies by repeating this
+            document.cookie = "age=10";
+
+            // delete a cookie by updating the value to null
+            document.cookie="name=;" // clear name cookie
+
+            // deleting a cookie (even the name/key)
+            document.cookie="name=;expires=Thu, 18 Dec 2020 12:00:00 UTC"
+
+            // updating the cookie
+            document.cookie="age=20";
+
+            document.cookie="value=abc;expires=Fri, 23 Jul 2021 03:01:00 UTC"
+            console.log(document.cookie);
+
+
+            //localStorage get and set item. Retains until cache is cleared
+            // localStorage.setItem("name", "jagan")
+            // undefined
+            // localStorage.getItem("name")
+            // "jagan"
+        </script>
+    </body>
+</html>

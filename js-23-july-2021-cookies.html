@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            Cookies for analytics
+        </title>
+        <body>
+            <button onclick="takeToForms()">Forms</button>
+            <button onclick="takeToEvents()">Events</button>
+            <script>
+                //document.cookie = "forms=1; expires=Thu, 27 May 2021 14:47:00 UTC"
+                function takeToForms() {
+                    let cookies = document.cookie;
+                    cookiesArray = cookies.split(";");
+                    let addForms = false;
+                    for(let i=0; i<cookiesArray.length; i++) {
+                        if(cookies.indexOf("forms")>-1 && cookiesArray[i].indexOf("forms")>-1) {
+                            let count = parseInt(cookiesArray[i].split("=")[1])
+                            let newCount = "forms="+(count+1).toString();
+                            document.cookie = newCount;
+                        }
+                    } 
+                    if(cookies.indexOf("forms")<0) {
+                       document.cookie = "forms=1"
+                    }
+                    // window.location="/html-css-js/forms.html"
+                }
+                function takeToEvents() {
+                    let cookies = document.cookie;
+                    cookiesArray = cookies.split(";");
+                    let addEvents = false;
+                    for(let i=0; i<cookiesArray.length; i++) {
+                        if(cookies.indexOf("events")>-1 && cookiesArray[i].indexOf("events")>-1) {
+                            let count = parseInt(cookiesArray[i].split("=")[1])
+                            let newCount = "events="+(count+1).toString();
+                            document.cookie = newCount;
+                        }
+                    } 
+                    if(cookies.indexOf("events")<0) {
+                       document.cookie = "events=1"
+                    }
+                    // window.location="/html-css-js/events.html"
+                }
+                var a = "jagan";
+                console.log(a[4]);
+            </script>
+        </body>
+    </head>
+</html>
