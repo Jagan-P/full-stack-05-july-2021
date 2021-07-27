@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <title>
+        CSS
+    </title>
+</head>
+
+<body>
+    <!-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+
+    <div
+        style="margin: 10px; display: flex;flex-direction: column;height: 200px;flex-wrap: wrap;flex-flow:  column wrap;">
+        <!-- items inside display: flex are called as flex items -->
+        <div style="width: 100px; height: 100px; background-color: red;">
+
+        </div>
+        <div style="width: 100px; height: 100px; background-color: yellow;">
+
+        </div>
+        <div style="width: 100px;height: 100px;background-color: yellow;">
+
+        </div>
+        <div style="width: 100px; height: 100px; background-color: red;">
+
+        </div>
+        <div style="width: 100px;height: 100px;background-color: yellow;">
+
+        </div>
+        <div style="width: 100px; height: 100px; background-color: red;">
+
+        </div>
+        <div style="width: 100px;height: 100px;background-color: yellow;">
+
+        </div>
+    </div>
+
+    <div
+        style="margin: 10px; display: flex;flex-direction: row;height: 200px;flex-wrap: wrap;/* flex-flow:  column wrap; */">
+        <!-- items inside display: flex are called as flex items -->
+        <div style="width: 100px; height: 100px; background-color: red;">
+
+        </div>
+        <div style="width: 100px; height: 100px; background-color: yellow;">
+
+        </div>
+        <div style="width: 100px;height: 100px;background-color: yellow;">
+
+        </div>
+        <div style="width: 100px; height: 100px; background-color: red;">
+
+        </div>
+        <div style="width: 100px;height: 100px;background-color: yellow;">
+
+        </div>
+        <div style="width: 100px; height: 100px; background-color: red;">
+
+        </div>
+        <div style="width: 100px;height: 100px;background-color: yellow;">
+
+        </div>
+        <div style="width: 100px; height: 100px; background-color: red;">
+
+        </div>
+        <div style="width: 100px;height: 100px;background-color: yellow;">
+
+        </div>
+        <div style="width: 100px; height: 100px; background-color: red;">
+
+        </div>
+    </div>
+
+    <div style="margin: 10px; display: flex; height: 100px;">
+        <div style="background-color: red;"></div>
+        <div style="background-color: yellow;"></div>
+    </div>
+
+    <div style="margin: 10px; display: flex;height: 100px;">
+        <div style="background-color: red;height: 100%;flex: 1 0 100%;"></div>
+        <div style="background-color: yellow;height: 100%;flex: 1 0 100%;"></div>
+    </div>
+
+    <div style="margin: 10px; display: flex;height: 100px;">
+        <div style="background-color: red;height: 100%;flex: 1 1 100%;"></div>
+        <div style="background-color: yellow;height: 100%;flex: 1 0 100%;"></div>
+    </div>
+
+    <!-- When using float right the DOM order and display order (initial element on right, successive elements will appear to the left of initial element ) is inverted -->
+    <div style="margin: 10px;height: 100px;">
+        <div style="display: inline-block;background-color: red;height: 100%;width: 50px;float: right;"></div>
+        <div style="display: inline-block;background-color: yellow;height: 100%;width: 50px;float: right;"></div>
+    </div>
+
+    <div style="margin: 10px;display: flex;height: 100px;justify-content: flex-end;">
+        <div style="background-color: red;height: 100%;width: 50px;"></div>
+        <div style="background-color: yellow;height: 100%;width: 50px;"></div>
+    </div>
+
+    <div style="margin: 10px; display: flex;height: 100px;">
+        <div style="background-color: red;height: 100%;width: 50px;order: 2;"></div>
+        <div style="background-color: yellow;height: 100%;width: 50px;order: 1;"></div>
+    </div>
+
+    <div style="margin: 10px;display: flex;height: 100px;justify-content: flex-start;">
+        <div style="background-color: red;height: 100%;width: 50px;"></div>
+        <div style="
+    height: 100%;
+    flex: 1;
+"></div>
+        <div style="background-color: yellow;height: 100%;width: 50px;"></div>
+    </div>
+</body>
+
+</html>
